@@ -18,11 +18,11 @@
 
 ## Introduction
 
-TBD
+A time zone is a geographical region where all the clocks are set to the same time. This simplifies timekeeping and avoids confusion when communicating across long distances. There are several different time zone standards, including Coordinated Universal Time (UTC), Greenwich Mean Time (GMT), and International Atomic Time (TAI). If we took a deep look at different standards all of them are interlinked with an offset. For example, UTC+0 is a standard time and reflects midnight but if I want to get the time of Kathmandu then an offset of (+5:45) is added to UTC making it UTC+5:45 which is 5:45 AM. A similar concept applies when changing from one timezone to a different timezone. So what is the problem then?
 
 ## Problem statement
 
-TBD
+As we can see having different timezone creates an unseen complexities when presenting, storing and calculating time. Timekeeping and presentation in a selected timezone would also be difficult when we have two actively interacting workspaces i.e frontend and backend. Moreover it increases complexities when we have users from different nation following different timezone. Situations where dates needs to be formatted between different formats is also a next possible problem. There are concepts which collides when we dig deeper thus a classification of common upcases has been created.
 
 ## Common use-case in its brief
 
