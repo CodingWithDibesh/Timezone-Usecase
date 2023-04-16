@@ -1,0 +1,11 @@
+{
+  "name": "timezone-use-case",
+  "version": "1.0.0",
+  "description": "A collective use-case of timezone",
+  "author": "Dibesh Raj Subedi <dibeshrsubedi.@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "typescript": "^5.0.4"
+  }
+}
