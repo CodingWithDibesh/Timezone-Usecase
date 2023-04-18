@@ -26,11 +26,11 @@ As we can see having different timezone creates an unseen complexities when pres
 
 ## Common use-case in its brief
 
-1. [**Use case 1:**](./src/Usecase1/ReadMe.md) Date time conversion between different timezones
+1. [**Use case 1:**](./src/Usecase1/ReadMe.md) Date time conversion between different timezones ✅
 
     We might bump into a situation where we need to convert time from one time zone to another timezone.
 
-2. [**Use case 2:**](./src/Usecase2/ReadMe.md) Date conversion between different formats
+2. [**Use case 2:**](./src/Usecase2/ReadMe.md) Date conversion between different formats 
 
     There are several formats of representing time which could vary according to user preferences.
 
