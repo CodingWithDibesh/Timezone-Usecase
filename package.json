@@ -5,7 +5,14 @@
   "author": "Dibesh Raj Subedi <dibeshrsubedi.@gmail.com>",
   "license": "MIT",
   "private": true,
+  "scripts": {
+    "uc1": "tsx ./src/Usecase1/index.ts"
+  },
   "devDependencies": {
+    "tsx": "^3.12.6",
     "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "dayjs": "^1.11.7"
   }
 }
