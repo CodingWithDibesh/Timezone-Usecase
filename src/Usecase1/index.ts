@@ -1,12 +1,7 @@
 import dayjs from "dayjs";
 import timezone from "dayjs/plugin/timezone";
 import utc from "dayjs/plugin/utc";
-
-console.log(
-    "Begin - Usecase 1: Date time conversion between different timezones\n"
-);
-// Date in UTC but RFC3339 format an example of date from backend
-const dateFromBackend = "2023-04-16T12:30:15-05:00";
+import { dateFromBackend, execUsecase } from "../utils";
 
 const UseCase1 = {
     scenario1: () => {
@@ -114,10 +109,10 @@ const UseCase1 = {
     },
 };
 
-UseCase1.scenario1();
-UseCase1.scenario2();
-UseCase1.scenario3();
-
+console.log(
+    "Begin - Usecase 1: Date time conversion between different timezones\n"
+);
+execUsecase(UseCase1);
 console.log(
     "\nEnd - Usecase 1: Date time conversion between different timezones"
 );
