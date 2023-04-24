@@ -7,7 +7,8 @@
   "private": true,
   "scripts": {
     "uc1": "tsx ./src/Usecase1/index.ts",
-    "uc2": "tsx ./src/Usecase2/index.ts"
+    "uc2": "tsx ./src/Usecase2/index.ts",
+    "uc3": "tsx ./src/Usecase3/index.ts"
   },
   "devDependencies": {
     "tsx": "^3.12.6",
