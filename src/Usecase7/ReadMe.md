@@ -10,3 +10,5 @@ Events that occurs in certain interval of tate and time. If we were to create in
 🤔 Creating it from the ground needs to solve lots of of moving pieces and would be equal to reinventing the wheel thus we will be using package for this problem which also solves the timezone issue.
 
 `RRule` : Link on [npmjs.com](https://www.npmjs.com/package/rrule) is a light weight package which helps to solve this problem.
+
+We could use this package in situations where we need to generate list of events starting from and ending at. Moreover all the minimal operations could be done in frontend instated of backend giving more flexibility with easy UI integration.
