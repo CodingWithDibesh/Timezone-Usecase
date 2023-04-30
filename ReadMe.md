@@ -34,7 +34,7 @@ As we can see having different timezone creates an unseen complexities when pres
 
     There are several formats of representing time which could vary according to user preferences.
 
-3. [**Use case 3:**](./src/Usecase3/ReadMe.md) Date time calculations to get the difference in time; with/without timezone
+3. [**Use case 3:**](./src/Usecase3/ReadMe.md) Date time calculations to get the difference in time; with/without timezone ✅
 
     We might come across a situation where we need to find differences between the time which might be stored in different formats and could include or exclude timezones.
 

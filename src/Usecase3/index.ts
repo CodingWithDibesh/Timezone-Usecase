@@ -1,4 +1,10 @@
+import dayjs from "dayjs";
 import { execUsecase, dateFromBackend } from "../utils";
+import relativeTime from "dayjs/plugin/relativeTime";
+import duration from "dayjs/plugin/duration";
+
+dayjs.extend(duration);
+dayjs.extend(relativeTime);
 
 // #region -> Human readable date time without using package
 const TIME_DATA = [
@@ -111,6 +117,53 @@ const Usecase3 = {
     },
     scenario4: () => {
         console.log("\t Scenario 4: All above scenarios with package\n");
+        // Scenario 1: To get human readable time of events (Past event of Future Event)
+        const humanReadable = dayjs(new Date(dateFromBackend)).fromNow();
+        console.log(
+            "Original date: ",
+            dateFromBackend,
+            " to human readable format: ",
+            humanReadable
+        );
+        // Scenario 2: To get time differences which could be used in different comparison
+        const differenceInTime = (
+            date: Date | number = new Date(dateFromBackend)
+        ) => {
+            return {
+                msAgo: dayjs().diff(date, "milliseconds"),
+                secsAgo: dayjs().diff(date, "seconds"),
+                minAgo: dayjs().diff(date, "minutes"),
+                hrAgo: dayjs().diff(date, "hours"),
+                // A bit unreliable
+                dayAgo: dayjs().diff(date, "days"),
+                // A bit unreliable
+                weeksAgo: dayjs().diff(date, "weeks"),
+                yearAgo: dayjs().diff(date, "years"),
+                monthsAgo: dayjs().diff(date, "months"),
+            };
+        };
+        const differenceWithTimeZone = differenceInTime();
+        console.log(
+            "Original date: ",
+            dateFromBackend,
+            " to differences in time: ",
+            differenceWithTimeZone
+        );
+        // Scenario 3: To calculate difference between times without time zone
+        // Date value in Epoch without timezone
+        const inputDate = 1381446215;
+        const differenceWithOutTimeZone = differenceInTime(inputDate);
+        console.log(
+            "Original date: ",
+            dateFromBackend,
+            " to differences in time without timezone: ",
+            differenceWithOutTimeZone
+        );
+        return {
+            humanReadable,
+            differenceWithTimeZone,
+            differenceWithOutTimeZone,
+        };
     },
 };
 
