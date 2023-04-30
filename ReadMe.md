@@ -50,7 +50,7 @@ As we can see having different timezone creates an unseen complexities when pres
 
     Situations when stored time is consumed on the front end using different rendering paradigms and creating issues due to changes in date-time value.
 
-7. [**Use case 7:**](./src/Usecase7/ReadMe.md) Handling recurring dates and events
+7. [**Use case 7:**](./src/Usecase7/ReadMe.md) Handling recurring dates and events ✅
 
     Situations where we need to keep track of recurring events at different timezone.
 
