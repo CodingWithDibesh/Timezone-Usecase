@@ -29,3 +29,5 @@ A short illustration of scenario with example where `User1` is from **Nepal** an
     User2:[Japan Time] -------------|
     Retrieve and Show
 </pre>
+
+As you can see the despite twe could simply send UTC but display the sent time as per the users location. 
