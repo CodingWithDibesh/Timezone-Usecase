@@ -7,6 +7,19 @@ dayjs.extend(utc);
 const PORT = 2468;
 const app = express();
 
+app.use(express.json());
+app.use(express.urlencoded());
+app.all("*", function (req, res, next) {
+    if (!req.get("Origin")) return next();
+    res.set("Access-Control-Allow-Origin", "*");
+    res.set("Access-Control-Allow-Methods", "GET,POST");
+    res.set("Access-Control-Allow-Headers", "X-Requested-With,Content-Type");
+
+    if ("OPTIONS" == req.method) return res.send(200);
+
+    next();
+});
+
 // A simple Mock API that sends and receives dates and act as backend
 app.post("/send", (req, res) => {
     let sentDate;
