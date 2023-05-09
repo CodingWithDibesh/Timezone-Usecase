@@ -46,7 +46,7 @@ As we can see having different timezone creates an unseen complexities when pres
 
     There might be situations when we need to store time in UTC and display it based on the user’s location.
 
-6. [**Use case 6:**](./src/Usecase6/ReadMe.md) Handling date time in different rendering paradigms
+6. [**Use case 6:**](./src/Usecase6/ReadMe.md) Handling date time in different rendering paradigms ✅
 
     Situations when stored time is consumed on the front end using different rendering paradigms and creating issues due to changes in date-time value.
 
