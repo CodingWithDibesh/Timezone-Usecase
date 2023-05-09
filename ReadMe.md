@@ -56,8 +56,21 @@ As we can see having different timezone creates an unseen complexities when pres
 
 ## Findings
 
-TBD
+Dealing with timezone data is not that difficult after all you need is perfect tool for your situation. Here are some of the findings that might give you some ideas how to approach the problem and solve it.
+
+1. When you are facing hydration issues -> Follow guide from [`Usecase6`](./src/Usecase6/ReadMe.md)
+2. Its always a good idea to store time related data in UTC
+3. Convert time for client based on their local and UTC
+4. Don't store time gap data on server as it may change in reference to time calculated
 
 ## Golden rule of thumb
 
-TBD
+Well it might sound obvious but here are some golden rule of thumbs that could prevent us form getting timezone related issue.
+
+1. Store time related data in UTC
+2. Request time related data in `ISO 8061` or `RFC3339` format which will be easy to manipulate by frontend.
+3. Render time as per user's timezone based on stored UTC time data
+4. Follow guide from [Usecase6](./src/Usecase6/ReadMe.md) if you are using SSR and have to deal with time related data.
+5. Select best time related package that supports internationalization as well. I've used [`DayJs`](https://day.js.org/) as it's a lightweight package.
+
+If there is anything missing let me know or we could collaborate on concepts together. Thanks for making till the end 🎉.
